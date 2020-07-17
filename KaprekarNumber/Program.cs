@@ -10,7 +10,7 @@ namespace KaprekarNumber
             int b = 10;
             Console.Write("Enter the number (p): ");
             int p = EnterNumber();
-            Console.Write("Enter the base (b): ");
+            Console.Write("Enter the base (b)..: ");
             b = EnterNumber();
 
 
@@ -18,12 +18,7 @@ namespace KaprekarNumber
             int number = 0;
             while (true)
             {
-                Console.WriteLine("(0)....................Exit");
-                Console.WriteLine("(1)....................Change (p)");
-                Console.WriteLine("(2)....................Change (b)");
-                Console.WriteLine("(3)....................Enter a number to test");
-                Console.WriteLine("(4)....................Show list of Kaprekar numbers (pLimit, nLimit)");
-
+                StartMessage();
 
                 str = Console.ReadLine();
                 switch (str)
@@ -178,6 +173,14 @@ namespace KaprekarNumber
                 list.Add(myList[i]);
             }
             return list;
+        }
+        private static void StartMessage()
+        {
+            Console.WriteLine("(0)....................Exit");
+            Console.WriteLine("(1)....................Change (p)");
+            Console.WriteLine("(2)....................Change (b)");
+            Console.WriteLine("(3)....................Enter a number to test");
+            Console.WriteLine("(4)....................Show list of Kaprekar numbers (pLimit, nLimit)");
         }
     }
 }
